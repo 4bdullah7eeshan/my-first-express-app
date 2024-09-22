@@ -8,13 +8,19 @@ app.get("/", (req, res) => res.send("hello, world"));
 // app.get("*", (req, res) => {
 //     res.send("* is a great way to catch all otherwise unmatched paths, e.g. for custom 404 error handling.");
 // });
-app.get("/:username/messages", (req, res) => {
-     console.log(req.params);
-     res.end();
-});
+// app.get("/:username/messages", (req, res) => {
+//      console.log(req.params);
+//      res.end();
+// });
 
-app.get("/:username/messages/:messageId", (req, res) => {
-    console.log(req.params);
+// app.get("/:username/messages/:messageId", (req, res) => {
+//     console.log(req.params);
+//     res.end();
+// });
+
+app.get("/:username/messages", (req, res) => {
+    console.log("Params:", req.params);
+    console.log("Query:", req.query);
     res.end();
 });
 
